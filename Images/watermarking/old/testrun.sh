@@ -6,7 +6,7 @@ offset_x=10
 offset_y=10
 
 # Hardcoded path to the watermark image
-watermark="/home/daniel/watermarks/overlay_on_transparent.png"
+watermark="/home/daniel/watermarks/overlay.png"
 
 # Prompt the user for the input directory
 read -p "Enter the path to the input directory: " input_directory
