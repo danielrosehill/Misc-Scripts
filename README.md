@@ -1,4 +1,12 @@
-# Misc scripts public
+# Miscellaneous Scripts
+
+The purpose of this folder is to house various scripts that I use. 
+
+**Most of these were generated with ChatGPT!**
+
+In many cases (but not all) I've tested and tweaked them a little to verify that they work.
+
+Note: I use Fedora Linux as my desktop OS and Ubuntu/Debian on servers so ... those are the likely filesystems I'm using. 
 
 ## Author
 
