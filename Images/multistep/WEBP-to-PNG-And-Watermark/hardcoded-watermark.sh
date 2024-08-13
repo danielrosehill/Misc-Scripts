@@ -6,7 +6,7 @@ echo "Welcome to Webp To PNG Conversion Utility V1"
 read -p "Please provide the full path to the directory where your WebP images are stored: " webp_dir
 
 # Hardcoded path to the watermark image
-watermark_path="/home/daniel/Images/Watermarking/watermarks/latest.png"
+watermark_path="/path/to/your/watermark.png"
 
 # Create a directory to store converted and watermarked images
 output_dir="$webp_dir/PNG_converted_watermarked"
@@ -17,9 +17,9 @@ counter=1
 
 # Loop through all WebP images in the specified directory
 for webp_file in "$webp_dir"/*.webp; do
-    # Convert WebP to PNG and apply watermark
+    # Convert WebP to PNG and apply watermark in the bottom right corner
     output_file="$output_dir/$counter.png"
-    convert "$webp_file" png:- | composite -gravity center "$watermark_path" - "$output_file"
+    convert "$webp_file" png:- | composite -gravity southeast "$watermark_path" - "$output_file"
 
     # Increment counter
     counter=$((counter + 1))
