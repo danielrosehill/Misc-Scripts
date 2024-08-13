@@ -17,8 +17,14 @@ output_directory="$input_directory/watermarked"
 # Ensure the output directory exists
 mkdir -p "$output_directory"
 
-# Get the first image in the input directory
-image=$(ls "$input_directory"/*.{jpg,jpeg,png} | head -n 1)
+# Get the first image in the input directory that matches jpg, jpeg, png, or webp
+image=$(ls "$input_directory"/*.{jpg,jpeg,png,webp} 2>/dev/null | head -n 1)
+
+# Check if an image was found
+if [ -z "$image" ]; then
+    echo "No image found in the specified formats (jpg, jpeg, png, webp) in the directory."
+    exit 1
+fi
 
 # Extract the base filename
 filename=$(basename "$image")
