@@ -1,3 +1,5 @@
+![alt text](Images/sloth-on-gpu-line.webp)
+
 # Miscellaneous Scripts
 
 The purpose of this folder is to house various scripts that I use. 
